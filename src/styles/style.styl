@@ -1,0 +1,139 @@
+@import "normalize.styl"
+
+/*Fonts*/
+@import "fonts.styl"
+
+body
+  box-sizing border-box
+  font-family 'Gotham Pro'
+  font-size 18px
+  text-align center
+  h1
+    font-family 'Gotham Pro Medium'
+    font-size 36px
+    font-weight 100
+    margin 30px 0
+
+header
+  color #fff
+  background url('../img/header/header-background.png')
+  background-size cover
+  padding-bottom 50px
+.header-logo
+  padding-top 20px
+  font-size 24px
+  font-weight bold
+.header-number
+  width 370px
+  margin 30px auto 60px
+  img
+    width 40px
+    height 40px
+    float left
+    margin 10px 20px
+  p
+    margin 5px
+    font-size 24px
+.header-name
+  font-weight bold
+  font-size 48px
+  margin 0
+.header-title
+  padding 0px 80px
+.header-button
+  width 500px
+  margin 50px auto 30px
+  border-radius 37px
+  background-color rgb(255, 102, 0)
+  p
+    font-size 24px
+    line-height 2.583
+    padding 5px 0
+    margin 0
+  &:hover
+    background-color #fff
+    cursor pointer
+    p
+      color #000
+
+//typesfences
+.typesfences
+  h2
+    font-family 'Gotham Pro Light'
+    font-size 36px
+    font-weight 100
+    margin 0
+    margin-bottom 60px
+.typesfences-background
+  width 100%
+.typesfences-background.top
+  margin-top 48px
+.typesfences-fence
+  display flex
+  .block
+    width 33.33%
+    img
+      box-shadow 0px 3px 5px 0px rgba(0, 0, 0, 1)
+      border-radius 50%
+    p
+      padding 20px 70px
+
+//advistory
+.advistory
+  form
+    margin-top 80px
+    input,button
+      display block
+      width 500px
+      margin 0 auto 50px
+      font-size 24px
+      padding 20px 0
+      border-radius: 50px
+      border 1px solid rgb(98, 98, 98);
+      text-align center
+      outline none
+    input::-webkit-input-placeholder
+      text-indent 0
+      color #000
+      transition text-indent .3s ease
+    input::-moz-placeholder
+      text-indent 0
+      color #000
+      transition text-indent .3s ease
+    input:-moz-placeholder
+      text-indent 0
+      color #000
+      transition text-indent .3s ease
+    input:-ms-input-placeholder
+      text-indent 0
+      color #000
+      transition text-indent .3s ease
+    input:focus::-webkit-input-placeholder
+      text-indent 500px
+    input:focus::-moz-placeholder
+      text-indent 500px
+    input:focus:-moz-placeholder
+      text-indent 500px
+    input:focus:-ms-input-placeholder
+      text-indent 500px
+    button
+      background-color #ff6600
+      color #fff
+      border none
+      &:hover
+        box-shadow 0px 7px 7px 0px rgba(127,127,127,1)
+        cursor pointer
+
+//whywe
+.whywe
+  h1
+    margin 40px
+  .block
+    display flex
+    flex-wrap wrap
+    margin 0px auto
+  .blocks
+    width 33%
+    margin-bottom 40px
+    p
+      padding 0 50px

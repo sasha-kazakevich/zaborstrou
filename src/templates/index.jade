@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(name="format-detection", content="telephone=no")
+  
+  title ЗаборСтрой
+  
+  link(rel="stylesheet" href="./css/main.css")
+  
+  script(src="js/script.js")
+  
+body
+  header
+    .header-logo
+      img(src="img/header/header-logo.png" alt="logo")
+      p ЗаборСтрой
+    .header-number
+      img(src="img/header/header-number.png" alt="number")
+      p +375 29 841 88 22
+      p +375 29 888 27 71
+    h1.header-name Строительство заборов “под ключ”
+    p.header-title Наша компания работает в этой сфере уже более 7 лет. Мы выполним все работы под ключ самостоятельно, нашему клиенту нужно лишь выбрать понравившуюся модель забора. Специалисты проведут все необходимые замеры, подготовительные мероприятия, рассчитают необходимое количество материалов.
+    .header-button
+      p Оставить заявку на замер
+  .typesfences
+    img.typesfences-background.top(src="img/typesfences/fence.png" alt="fence")
+    h1 Виды заборов
+    - var types = ['Элитные','Стандратные']
+    - var info = [{'pic':['img/typesfences/elit/1.png','img/typesfences/elit/2.png','img/typesfences/elit/3.png'],'text':['Еврозаборы (заборы без фундаментов)','Заборы из элементов (Brick)','Заборы из бессера']},{'pic':['img/typesfences/standart/1.png','img/typesfences/standart/2.png','img/typesfences/standart/3.png'],'text':['Заборы из профнастила','Заборы из метталлоштакетника','Заборы из 3D панелей']}]
+      each type,i in types
+        h2 #{type}
+        .typesfences-fence
+          each img,p in info[i]['pic']
+            .block
+              img(src="#{img}")
+              p #{info[i]['text'][p]}
+  .advistory
+    img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
+    h1 Получить бесплатную консультацию
+    form.contacts-form#advistory-form
+      input(form="advistory-form" id="name" name="name" type="text" title="Имя" placeholder="Имя" required pattern="[a-zA-Zа-яА-Я ]+")
+      input(form="advistory-form" id="number" name="number" type="text" title="Ваш телефон в формате +375 ** *** ** **" placeholder="Телефон" required pattern="(\\+375 (25|29|33|44)( [0-9]{3}( [0-9]{2}){2}))")
+      button Отправить
+  .whywe
+    img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
+    h1 Почему мы?
+    .block
+      -var images = ['img/whywe/1.png','img/whywe/2.png','img/whywe/3.png','img/whywe/4.png','img/whywe/5.png','img/whywe/6.png']
+      -var texts = ['Выбор любых конструктивных решений, форм, оттенков ограждения','Бесплатный размер на следующий день после оформления Вами заявки','Поставки материалов для заборов в короткие сроки','Монтаж в любое удобное клиенту время - без выходных','Осуществляем качественные работы на протяжении 7 лет','Огромный опыт у работников компании']
+        each img,i in images
+          .blocks
+            img(src="#{img}")
+            p #{texts[i]}
