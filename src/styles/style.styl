@@ -79,9 +79,9 @@ header
       padding 20px 70px
 
 //advistory
-.advistory
+.advistory,.contacts
   form
-    margin-top 80px
+    margin-top 40px
     input,button
       display block
       width 500px
@@ -137,3 +137,111 @@ header
     margin-bottom 40px
     p
       padding 0 50px
+
+//ourwork
+
+.ourwork
+  margin-bottom 60px
+  .slider_wrap
+    margin 50px auto 0
+    width 90%
+    height 40vw
+    position relative
+    overflow hidden
+
+  .slider_wrap img
+    width 85%
+    height auto
+    display none
+    position absolute
+    left 7%
+    top 0
+
+  .slider_wrap img:first-child
+    display block
+
+  .slider_wrap span
+    margin-top -13px
+    width 34px
+    height 60px
+    display block
+    position absolute
+    top 44%
+    cursor pointer
+    background url(../img/ourwork/sprite_icon.png) no-repeat
+
+  .slider_wrap span.next
+    right 5px
+    background-position -99px 0
+  .slider_wrap span.next:hover
+    right 0
+    width 47px
+    height 63px
+    background-position -138px -5px
+  .slider_wrap span.prev
+    left 5px
+    background-position -5px 0
+  .slider_wrap span.prev:hover
+    left 0
+    width 47px
+    height 63px
+    background-position -47px -5px
+
+.feedback
+  .clients
+    display flex
+    margin 0 10px 40px 0
+  .name
+    font-family 'Gotham Pro Medium'
+    font-size 16px
+  .hero
+    width 25%
+  .text
+    font-family 'Gotham Pro Light'
+    font-style italic
+    font-size 14px
+    text-align left
+    padding 0 40px
+
+.how-working
+  .steps
+    display flex
+    flex-wrap wrap
+    margin-left 90px
+    margin-bottom 40px
+  .step
+    width 50%
+    display flex
+    align-items flex-start
+    margin 30px 0
+    p
+      margin 0
+      padding 0 80px
+      text-align left
+      font-size 23px
+
+.installments
+  p
+    margin-left 90px
+    text-align left
+    font-family 'Gotham Pro Light'
+
+.other
+  .other-block
+    img
+      margin 20px 0
+    p
+      margin 30px 0
+
+.contacts
+  .application
+    font-family 'Gotham Pro Light'
+    font-size 24px
+
+footer
+  .num
+    margin 30px 0
+    font-size 24px
+  .ip
+    font-size 14px
+    margin 20px 0

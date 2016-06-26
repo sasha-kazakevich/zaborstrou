@@ -9,6 +9,7 @@ head
   
   link(rel="stylesheet" href="./css/main.css")
   
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js")
   script(src="js/script.js")
   
 body
@@ -53,3 +54,68 @@ body
           .blocks
             img(src="#{img}")
             p #{texts[i]}
+  .ourwork
+    img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
+    h1 Наши работы
+    .slider_wrap#slider
+        img.active(src="img/ourwork/slide1.png" alt="slide")
+        img(src="img/ourwork/slide2.jpg" alt="slide")
+        img(src="img/ourwork/slide3.jpg" alt="slide")
+  .feedback
+    img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
+    h1 Отзывы наших клиентов
+    .clients
+      -var images = ['img/feedback/1.png','img/feedback/2.png','img/feedback/3.png','img/feedback/4.png']
+      -var names = ['Ирина Легкая','Цукан Руслан','Ольга Притшина','Кузьменков Василий']
+      -var texts = ['Примите, пожалуйста, огромную благодарность за ваше внимание, отзывчивость при выполнении заказа. Работу и человечность вашей компании оцениваем по наивысшему баллу.Спасибо вам, процветания и счастья. Будем рекомендовать вас своим знакомым.','Заказывали забор из профнастила. Огромное спасибо компании и всем ребятам этой бригады. Забор поставили быстро и качественно. Спасибо!','Хотим выразить огромную благодарность. Выполнили огромный объем работ. Участок идет под наклоном, они предлагали различные варианты решения этой проблемы. В итоге  забор получился очень красивый, все соседи ходят смотреть, как на экскурсию.','Ребята работали точно, слаженно, ответственно, прислушиваясь к мнению заказчика. Не было никаких проколов, опозданий, недоделок. Приятно видеть таких ответственных людей, таких профессионалов своего дела.']
+        each img,i in images
+          .hero
+            img(src="#{img}")
+            p.name #{names[i]}
+            p.text #{texts[i]}
+  .how-working
+    img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
+    h1 Как мы работаем
+    .steps
+      -var images = ['img/working/1.png','img/working/2.png','img/working/3.png','img/working/4.png','img/working/5.png','img/working/6.png','img/working/7.png','img/working/8.png']
+      -var text = ['1. Звоните по нашем номерам или оставляете заявку на нашем сайте','5. Доставка на Ваш объект','2. Получаете коммерческое предложение','6. Производим монтаж забора в любое время удобное для Вас','3. Заключение договора и внесение предоплаты','7. Оплачиваете оставшую сумму','4. Комплектуем и загружаем товар для доставки к Вам на объект','8. Гарантия на работы и материалы от 1 года.']
+        each img,i in images
+          .step
+            img(src='#{img}')
+            p #{text[i]}
+  .installments
+    img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
+    h1 Рассрочка
+    img(src="img/installments/installments.png" alt="installments")
+    p Любой товар в нашем магазине можно приобрести в рассрочку, не выходя из дома.
+    p Для этого достаточно сообщить специалисту выбранный способ оплаты и Вас проконсультируют насчет наиболее удобного варианта платежей.
+    p Предлагаем выгодную рассрочку сроком на 2, 3, 4 месяца. С предоплатой или без, на Ваш выбор.
+    p Что для этого нужно?
+    p Паспорт гражданина РБ
+    p Заполнить анкету и подписать договор
+    p Справка о доходах не нужна!
+    p Более подробную информацию Вы можете уточнить у наших специалистов.
+  .other
+    img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
+    h1 Другие услуги
+    -var images = ['img/other/1.png','img/other/2.png']
+    -var texts = ['Монтаж наружного видеонаблюдения,видеодомофонов и электромеханических замков.','Изготовление и монтаж ворот откатных, распашных и калиток любых конфигураций.']
+      each img,i in images
+        .other-block
+          img(src="#{img}")
+          p #{texts[i]}
+  .contacts
+    img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
+    h1 Контакты
+    p.application Оставить заявку на звонок
+    form.contacts-form#contacts-form
+      input(form="contacts-form" id="name" name="name" type="text" title="Имя" placeholder="Имя" required pattern="[a-zA-Zа-яА-Я ]+")
+      input(form="contacts-form" id="number" name="number" type="text" title="Ваш телефон в формате +375 ** *** ** **" placeholder="Телефон" required pattern="(\\+375 (25|29|33|44)( [0-9]{3}( [0-9]{2}){2}))")
+      button Отправить
+  footer
+    p.num 
+      | +375 29 841 88 22<br/>
+      | +375 29 888 27 71
+    p.ip
+      | ИП 309310932132109 <br/>
+      | Вася Пупкин
