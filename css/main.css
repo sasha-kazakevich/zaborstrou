@@ -303,11 +303,14 @@ header {
 .typesfences-fence .block p {
   padding: 20px 70px;
 }
-.advistory form {
-  margin-top: 80px;
+.advistory form,
+.contacts form {
+  margin-top: 40px;
 }
 .advistory form input,
-.advistory form button {
+.contacts form input,
+.advistory form button,
+.contacts form button {
   display: block;
   width: 500px;
   margin: 0 auto 50px;
@@ -318,44 +321,54 @@ header {
   text-align: center;
   outline: none;
 }
-.advistory form input::-webkit-input-placeholder {
+.advistory form input::-webkit-input-placeholder,
+.contacts form input::-webkit-input-placeholder {
   text-indent: 0;
   color: #000;
   transition: text-indent 0.3s ease;
 }
-.advistory form input::-moz-placeholder {
+.advistory form input::-moz-placeholder,
+.contacts form input::-moz-placeholder {
   text-indent: 0;
   color: #000;
   transition: text-indent 0.3s ease;
 }
-.advistory form input:-moz-placeholder {
+.advistory form input:-moz-placeholder,
+.contacts form input:-moz-placeholder {
   text-indent: 0;
   color: #000;
   transition: text-indent 0.3s ease;
 }
-.advistory form input:-ms-input-placeholder {
+.advistory form input:-ms-input-placeholder,
+.contacts form input:-ms-input-placeholder {
   text-indent: 0;
   color: #000;
   transition: text-indent 0.3s ease;
 }
-.advistory form input:focus::-webkit-input-placeholder {
+.advistory form input:focus::-webkit-input-placeholder,
+.contacts form input:focus::-webkit-input-placeholder {
   text-indent: 500px;
 }
-.advistory form input:focus::-moz-placeholder {
+.advistory form input:focus::-moz-placeholder,
+.contacts form input:focus::-moz-placeholder {
   text-indent: 500px;
 }
-.advistory form input:focus:-moz-placeholder {
+.advistory form input:focus:-moz-placeholder,
+.contacts form input:focus:-moz-placeholder {
   text-indent: 500px;
 }
-.advistory form input:focus:-ms-input-placeholder {
+.advistory form input:focus:-ms-input-placeholder,
+.contacts form input:focus:-ms-input-placeholder {
   text-indent: 500px;
 }
-.advistory form button {
+.advistory form button,
+.contacts form button {
   background-color: #f60;
   color: #fff;
   border: none;
 }
-.advistory form button:hover {
+.advistory form button:hover,
+.contacts form button:hover {
   box-shadow: 0px 7px 7px 0px #7f7f7f;
   cursor: pointer;
 }
@@ -375,4 +388,119 @@ header {
 }
 .whywe .blocks p {
   padding: 0 50px;
+}
+.ourwork {
+  margin-bottom: 60px;
+}
+.ourwork .slider_wrap {
+  margin: 50px auto 0;
+  width: 90%;
+  height: 40vw;
+  position: relative;
+  overflow: hidden;
+}
+.ourwork .slider_wrap img {
+  width: 85%;
+  height: auto;
+  display: none;
+  position: absolute;
+  left: 7%;
+  top: 0;
+}
+.ourwork .slider_wrap img:first-child {
+  display: block;
+}
+.ourwork .slider_wrap span {
+  margin-top: -13px;
+  width: 34px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  top: 44%;
+  cursor: pointer;
+  background: url("../img/ourwork/sprite_icon.png") no-repeat;
+}
+.ourwork .slider_wrap span.next {
+  right: 5px;
+  background-position: -99px 0;
+}
+.ourwork .slider_wrap span.next:hover {
+  right: 0;
+  width: 47px;
+  height: 63px;
+  background-position: -138px -5px;
+}
+.ourwork .slider_wrap span.prev {
+  left: 5px;
+  background-position: -5px 0;
+}
+.ourwork .slider_wrap span.prev:hover {
+  left: 0;
+  width: 47px;
+  height: 63px;
+  background-position: -47px -5px;
+}
+.feedback .clients {
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 10px 40px 0;
+}
+.feedback .name {
+  font-family: 'Gotham Pro Medium';
+  font-size: 16px;
+}
+.feedback .hero {
+  width: 25%;
+}
+.feedback .text {
+  font-family: 'Gotham Pro Light';
+  font-style: italic;
+  font-size: 14px;
+  text-align: left;
+  padding: 0 40px;
+}
+.how-working .steps {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: 90px;
+  margin-bottom: 40px;
+}
+.how-working .step {
+  width: 50%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+  margin: 30px 0;
+}
+.how-working .step p {
+  margin: 0;
+  padding: 0 80px;
+  text-align: left;
+  font-size: 23px;
+}
+.installments p {
+  margin-left: 90px;
+  text-align: left;
+  font-family: 'Gotham Pro Light';
+}
+.other .other-block img {
+  margin: 20px 0;
+}
+.other .other-block p {
+  margin: 30px 0;
+}
+.contacts .application {
+  font-family: 'Gotham Pro Light';
+  font-size: 24px;
+}
+footer .num {
+  margin: 30px 0;
+  font-size: 24px;
+}
+footer .ip {
+  font-size: 14px;
+  margin: 20px 0;
 }
