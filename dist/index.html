@@ -5,25 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <title>ЗаборСтрой</title>
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   <script src="js/script.js"></script>
 </head>
 <body>
+  <div class="form-background"></div>
   <header>
     <div class="header-logo"><img src="img/header/header-logo.png" alt="logo">
       <p>ЗаборСтрой</p>
     </div>
-    <div class="header-number"><img src="img/header/header-number.png" alt="number">
+    <div class="header-number"><img src="img/header/header-number.png" alt="num">
       <p>+375 29 841 88 22</p>
       <p>+375 29 888 27 71</p>
     </div>
     <h1 class="header-name">Строительство заборов “под ключ”</h1>
-    <p class="header-title">Наша компания работает в этой сфере уже более 7 лет. Мы выполним все работы под ключ самостоятельно, нашему клиенту нужно лишь выбрать понравившуюся модель забора. Специалисты проведут все необходимые замеры, подготовительные мероприятия, рассчитают необходимое количество материалов.</p>
-    <div class="header-button">
-      <p>Оставить заявку на замер</p>
-    </div>
+    <p class="header-title">Наша компания работает в этой сфере уже более 7 лет. Мы выполним все работы под ключ самостоятельно, нашему клиенту нужно лишь выбрать понравившуюся модель забора. Специалисты проведут все необходимые замеры, подготовительные мероприятия, рассчитают необходимое количество материалов.</p><a href="#contacts" id="button-contact" class="header-button">
+      <p>Оставить заявку на замер</p></a>
   </header>
+  <div id="up" class="up"></div>
   <div class="typesfences"><img src="img/typesfences/fence.png" alt="fence" class="typesfences-background top">
     <h1>Виды заборов</h1>
     <h2>Элитные</h2>
@@ -52,10 +53,10 @@
     </div>
   </div>
   <div class="advistory"><img src="img/typesfences/fence.png" alt="fence" class="typesfences-background">
-    <h1>Получить бесплатную консультацию</h1>
+    <h1>Получить бесплатную консультацию</h1><img src="img/contacts/thank.png" alt="thank" class="form-thank">
     <form id="advistory-form" class="contacts-form">
       <input form="advistory-form" id="name" name="name" type="text" title="Имя" placeholder="Имя" required pattern="[a-zA-Zа-яА-Я ]+">
-      <input form="advistory-form" id="number" name="number" type="text" title="Ваш телефон в формате +375 ** *** ** **" placeholder="Телефон" required pattern="(\+375 (25|29|33|44)( [0-9]{3}( [0-9]{2}){2}))">
+      <input form="advistory-form" id="number" name="number" type="text" title="Ваш телефон в формате +375 25|29|33|44 *** ** **" placeholder="Телефон" required pattern="(\+375 (25|29|33|44)( [0-9]{3}( [0-9]{2}){2}))">
       <button>Отправить</button>
     </form>
   </div>
@@ -137,7 +138,7 @@
     </div>
   </div>
   <div class="installments"><img src="img/typesfences/fence.png" alt="fence" class="typesfences-background">
-    <h1>Рассрочка</h1><img src="img/installments/installments.png" alt="installments">
+    <h1>Рассрочка</h1><img src="img/installments/installments.png" alt="installments" class="install">
     <p>Любой товар в нашем магазине можно приобрести в рассрочку, не выходя из дома.</p>
     <p>Для этого достаточно сообщить специалисту выбранный способ оплаты и Вас проконсультируют насчет наиболее удобного варианта платежей.</p>
     <p>Предлагаем выгодную рассрочку сроком на 2, 3, 4 месяца. С предоплатой или без, на Ваш выбор.</p>
@@ -150,15 +151,15 @@
   <div class="other"><img src="img/typesfences/fence.png" alt="fence" class="typesfences-background">
     <h1>Другие услуги</h1>
     <div class="other-block"><img src="img/other/1.png">
-      <p>Монтаж наружного видеонаблюдения,видеодомофонов и электромеханических замков.</p>
+      <p>Монтаж наружного видеонаблюдения, видеодомофонов и электромеханических замков.</p>
     </div>
     <div class="other-block"><img src="img/other/2.png">
       <p>Изготовление и монтаж ворот откатных, распашных и калиток любых конфигураций.</p>
     </div>
   </div>
-  <div class="contacts"><img src="img/typesfences/fence.png" alt="fence" class="typesfences-background">
+  <div id="contacts" class="contacts"><img src="img/typesfences/fence.png" alt="fence" class="typesfences-background">
     <h1>Контакты</h1>
-    <p class="application">Оставить заявку на звонок</p>
+    <p class="application">Оставить заявку на звонок</p><img src="img/contacts/thank.png" alt="thank" class="form-thank">
     <form id="contacts-form" class="contacts-form">
       <input form="contacts-form" id="name" name="name" type="text" title="Имя" placeholder="Имя" required pattern="[a-zA-Zа-яА-Я ]+">
       <input form="contacts-form" id="number" name="number" type="text" title="Ваш телефон в формате +375 ** *** ** **" placeholder="Телефон" required pattern="(\+375 (25|29|33|44)( [0-9]{3}( [0-9]{2}){2}))">

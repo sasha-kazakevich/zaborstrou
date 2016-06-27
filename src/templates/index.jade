@@ -6,25 +6,27 @@ head
   meta(name="format-detection", content="telephone=no")
   
   title ЗаборСтрой
-  
+  link(rel="shortcut icon", href="/img/favicon.ico", type="image/x-icon")
   link(rel="stylesheet" href="./css/main.css")
   
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js")
   script(src="js/script.js")
   
 body
+  .form-background
   header
     .header-logo
       img(src="img/header/header-logo.png" alt="logo")
       p ЗаборСтрой
     .header-number
-      img(src="img/header/header-number.png" alt="number")
+      img(src="img/header/header-number.png" alt="num")
       p +375 29 841 88 22
       p +375 29 888 27 71
     h1.header-name Строительство заборов “под ключ”
     p.header-title Наша компания работает в этой сфере уже более 7 лет. Мы выполним все работы под ключ самостоятельно, нашему клиенту нужно лишь выбрать понравившуюся модель забора. Специалисты проведут все необходимые замеры, подготовительные мероприятия, рассчитают необходимое количество материалов.
-    .header-button
+    a(href="#contacts").header-button#button-contact
       p Оставить заявку на замер
+  .up#up
   .typesfences
     img.typesfences-background.top(src="img/typesfences/fence.png" alt="fence")
     h1 Виды заборов
@@ -40,9 +42,10 @@ body
   .advistory
     img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
     h1 Получить бесплатную консультацию
+    img.form-thank(src="img/contacts/thank.png" alt="thank")
     form.contacts-form#advistory-form
       input(form="advistory-form" id="name" name="name" type="text" title="Имя" placeholder="Имя" required pattern="[a-zA-Zа-яА-Я ]+")
-      input(form="advistory-form" id="number" name="number" type="text" title="Ваш телефон в формате +375 ** *** ** **" placeholder="Телефон" required pattern="(\\+375 (25|29|33|44)( [0-9]{3}( [0-9]{2}){2}))")
+      input(form="advistory-form" id="number" name="number" type="text" title="Ваш телефон в формате +375 25|29|33|44 *** ** **" placeholder="Телефон" required pattern="(\\+375 (25|29|33|44)( [0-9]{3}( [0-9]{2}){2}))")
       button Отправить
   .whywe
     img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
@@ -86,7 +89,7 @@ body
   .installments
     img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
     h1 Рассрочка
-    img(src="img/installments/installments.png" alt="installments")
+    img.install(src="img/installments/installments.png" alt="installments")
     p Любой товар в нашем магазине можно приобрести в рассрочку, не выходя из дома.
     p Для этого достаточно сообщить специалисту выбранный способ оплаты и Вас проконсультируют насчет наиболее удобного варианта платежей.
     p Предлагаем выгодную рассрочку сроком на 2, 3, 4 месяца. С предоплатой или без, на Ваш выбор.
@@ -99,15 +102,17 @@ body
     img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
     h1 Другие услуги
     -var images = ['img/other/1.png','img/other/2.png']
-    -var texts = ['Монтаж наружного видеонаблюдения,видеодомофонов и электромеханических замков.','Изготовление и монтаж ворот откатных, распашных и калиток любых конфигураций.']
+    -var texts = ['Монтаж наружного видеонаблюдения, видеодомофонов и электромеханических замков.','Изготовление и монтаж ворот откатных, распашных и калиток любых конфигураций.']
       each img,i in images
         .other-block
           img(src="#{img}")
           p #{texts[i]}
-  .contacts
+  .contacts#contacts
+    //- a#contacts(name="contacts")
     img.typesfences-background(src="img/typesfences/fence.png" alt="fence")
     h1 Контакты
     p.application Оставить заявку на звонок
+    img.form-thank(src="img/contacts/thank.png" alt="thank")
     form.contacts-form#contacts-form
       input(form="contacts-form" id="name" name="name" type="text" title="Имя" placeholder="Имя" required pattern="[a-zA-Zа-яА-Я ]+")
       input(form="contacts-form" id="number" name="number" type="text" title="Ваш телефон в формате +375 ** *** ** **" placeholder="Телефон" required pattern="(\\+375 (25|29|33|44)( [0-9]{3}( [0-9]{2}){2}))")

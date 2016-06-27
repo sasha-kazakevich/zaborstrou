@@ -1,4 +1,24 @@
 $(document).ready(function(){
+
+  //scroll
+  $("#button-contact").on("click",function(event){
+    event.preventDefault();
+    var id = $(this).attr("href"),
+      top = $(id).offset().top;
+    $("body,html").animate({scrollTop: top},1000);
+    return false;
+  });
+  $(window).scroll(function(){
+    if($(this).scrollTop() > 200){
+      $("#up").fadeIn();
+    }else $("#up").fadeOut();
+  });
+  $("#up").click(function(){
+    $("html,body").animate({ scrollTop: 0}, 1000);
+    return false;
+  });
+
+  //slider
   $(function () {
 	var elWrap = $('#slider'),
 		el =  elWrap.find('img'),
@@ -41,6 +61,32 @@ $(document).ready(function(){
 			indexImg = indexMax;
 		}
 		change ();
-	});
-});
+  	});
+  });
+
+  //form
+  $('.contacts-form').on('submit', function (e) {
+    e.preventDefault();
+    var name = e.target.elements.name.value;
+    var number = e.target.elements.number.value;
+    $.ajax({
+        url: 'https://formspree.io/zabor-stroi1@yandex.ru',
+        method: 'POST',
+        data: {name:name,
+              number: number},
+        dataType: 'json',
+        complete: function(){
+          $('.form-thank').css('display','block');
+          $('.form-background').css('display','block');
+          setTimeout(function(){
+            $('.form-thank').css('display','none');
+            $('.form-background').css('display','none');
+          },4000)
+        }
+    });
+
+    e.target.elements.name.value = '';
+    e.target.elements.number.value = '';
+  });
+
 })
